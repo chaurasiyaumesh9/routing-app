@@ -1,0 +1,26 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/chaurasiyaumesh9/angular-app-00",
+  "authors": [
+    "Umesh Chaurasiya <chaurasiyaumesh9@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "eonasdan-bootstrap-datetimepicker": "~4.17.37",
+    "moment": ">= 2.10.6",
+    "bootstrap-datepicker": "~1.5.1",
+    "ng-file-upload": "^11.2.3",
+    "ng-file-upload-shim": "^11.2.3"
+  }
+}

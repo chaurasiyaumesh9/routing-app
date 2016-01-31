@@ -1,0 +1,57 @@
+<!-- home.html -->
+    <div class="jumbotron text-center">
+        <h1> Resource Handling  </h1>
+
+        <p>{{ message }}</p>
+    </div>
+
+<div class="container">
+	 <!-- <form id="uploadForm" enctype="multipart/form-data" action="/fileupload"  method="POST" >
+		<p> <span id="error-messages" class="error-messages alert alert-warning"></span></p>
+		<p><input type="file" id="uploadImges" name="userPhoto"  multiple 	/></p>
+		<p> <input type="submit" class="btn btn-primary" onclick="return validateFileType('uploadImges');" /></p>
+		</form>  -->
+
+		<form accept-charset="UTF-8" >
+			
+			<button multiple ngf-select="uploadFiles($files, $invalidFiles)" accept="image/*" ngf-max-size="20MB"> Select Files</button>
+			<br><br>
+			Files & Progress:
+		  <ul class="progress-status">
+			<li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$errorParam}}
+			 
+			  <div class="progress" ng-show="f.progress >= 0">
+				<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{f.progress}}" aria-valuemin="0" aria-valuemax="100" style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
+			  </div>
+
+			</li>
+			<li ng-repeat="f in errFiles" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}
+			</li> 
+		  </ul>
+		  
+		  {{errorMsg}}
+		</form>
+	 
+		 
+</div>
+<style type="text/css">
+	.progress-status{
+		max-height:390px;
+		overflow:auto;
+	}
+</style>
+<style type="text/css">
+	
+    a[ ng-click ] {
+        color: #FF00CC ;
+        cursor: pointer ;
+        text-decoration: underline ;
+    }
+	.error-messages{
+		display:none;
+	}
+	.error-messages.active{
+		display:block;
+	}
+</style>
+
